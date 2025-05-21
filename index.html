@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operace Barbarossa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- Hlavní navigace a nadpis -->
+    <header>
+        <h1>Operace Barbarossa - Digitální Památník</h1>
+        <p>Interaktivní časová osa a mapa událostí</p>
+    </header>
+
+    <!-- Časová osa -->
+    <section class="timeline">
+        <div class="event">
+            <span>22. června 1941</span>
+            <h3><a href="#event1">Začátek Operace Barbarossa</a></h3>
+        </div>
+
+        <div class="event">
+            <span>22.–29. června 1941</span>
+            <h3><a href="#event2">Obléhání Brestské pevnosti</a></h3>
+        </div>
+
+        <div class="event">
+            <span>28. června 1941</span>
+            <h3><a href="#event3">Dobytí Minsku</a></h3>
+        </div>
+
+        <div class="event">
+            <span> 16. července 1941</span>
+            <h3><a href="#event4"> Bitva o Smolensk </a></h3>
+        </div>
+
+        <div class="event">
+            <span>19. září 1941</span>
+            <h3><a href="#event5">Pád Kyjeva</a></h3>
+        </div>
+
+        <!-- Další události... -->
+    </section>
+
+    <!-- Mapa -->
+    <section id="map" style="height: 500px;"></section>
+
+    <!-- Detaily událostí -->
+    <section class="event-details" id="event1">
+        <h2>Začátek Operace Barbarossa</h2>
+        <p>22. června 1941 se začala operace Barbarossa, německý útok na Sovětský svaz.</p>
+        <video controls style="width: 100%;">
+            <source src="https://www.example.com/video1.mp4" type="video/mp4">
+        </video>
+        <a href="#map">Zpět k mapě</a>
+    </section>
+
+    <section class="event-details" id="event2">
+        <h2>Obléhání Bretské pevnosti</h2>
+        <p>Obrana Brestské pevnosti se uskutečnila od prvních výstřelů Operace Barbarossa 22. června do 30. června 1941, přičemž drobné boje a přestřelky trvaly až do konce července 1941.</p>
+        <video controls style="width: 100%;">
+            <source src="https://www.example.com/video2.mp4" type="video/mp4">
+        </video>
+        <a href="#map">Zpět k mapě</a>
+    </section>
+
+    <section class="event-details" id="event3">
+        <h2>Dobytí Minsku</h2>
+        <p>Bitva o Bialystok-Minsk, která trvala pouhých 18 dní, od 22. června do 9. července 1941, a byla jednou z prvních akcí operace Barbarossa</p>
+        <video controls style="width: 100%;">
+            <source src="https://www.example.com/video2.mp4" type="video/mp4">
+        </video>
+        <a href="#map">Zpět k mapě</a>
+    </section>
+
+    <section class="event-details" id="event4">
+        <h2>Bitva o Smolensk</h2>
+        <p>První bitva o Smolensk byla součástí německého plánu Operace Barbarossa a odehrávala se v rozpětí dvou měsíců od 10. července do 10. září 1941.</p>
+        <video controls style="width: 100%;">
+            <source src="https://www.example.com/video2.mp4" type="video/mp4">
+        </video>
+        <a href="#map">Zpět k mapě</a>
+    </section>
+
+    <section class="event-details" id="event5">
+        <h2>Pád Kyjeva</h2>
+        <p>Tři měsíce po zahájení útoku na Sovětský svaz vstoupily 19. září 1941 německé jednotky do Kyjeva. Ztráta důležitého města ale nebyla jedinou pohromou, která Sověty potkala – německé tankové jednotky zároveň východně od ukrajinské metropole dokončily uzavření obřího kotle, v němž se ocitlo přes 500 000 sovětských vojáků. Šlo o největší obkličovací operaci v dějinách válek.</p>
+        <video controls style="width: 100%;">
+            <source src="https://www.example.com/video2.mp4" type="video/mp4">
+        </video>
+        <a href="#map">Zpět k mapě</a>
+    </section>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="leaflet.js"></script>
+</body>
+</html>

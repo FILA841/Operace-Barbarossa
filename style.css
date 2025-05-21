@@ -1,0 +1,80 @@
+/* Základní nastavení */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+/* Časová osa */
+.timeline {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.event {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.event a {
+    color: white;
+    text-decoration: none;
+}
+
+.event a:hover {
+    text-decoration: underline;
+}
+
+/* Mapa */
+#map {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Detaily události */
+.event-details {
+    background-color: white;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event-details h2 {
+    font-size: 2em;
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+}
