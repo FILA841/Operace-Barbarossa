@@ -6,8 +6,13 @@
     <title>Operace Barbarossa</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
+
+<div id="preloader">
+    <div class="loader-text">Operace, která změnila průběh druhé světové války a otevřela východní frontu.</div>
+</div>
 
     <!-- Hlavní navigace a nadpis -->
     <header>
@@ -68,42 +73,42 @@
     <section id="map" style="height: 500px;"></section>
 
     <!-- Detaily událostí -->
-    <section class="event-details" id="event1">
+    <section class="event-details" id="event1" data-aos="fade-up">
         <h2>Začátek Operace Barbarossa</h2>
         <p>22. června 1941 se začala operace Barbarossa, německý útok na Sovětský svaz.</p>
         <iframe width="100%" height="850px" src="https://www.youtube.com/embed/gPMgYC0sXos?si=FpaA45SUX3lxJtUd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <a href="#map">Zpět k mapě</a>
     </section>
 
-    <section class="event-details" id="event2">
+    <section class="event-details" id="event2" data-aos="fade-up">
         <h2>Obléhání Bretské pevnosti</h2>
         <p>Obrana Brestské pevnosti se uskutečnila od prvních výstřelů Operace Barbarossa 22. června do 30. června 1941, přičemž drobné boje a přestřelky trvaly až do konce července 1941.</p>
         <iframe width="100%" height="850px" src="https://www.youtube.com/embed/QSEIx-A0TdQ?si=RhOzXYdkolyBPeXK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <a href="#map">Zpět k mapě</a>
     </section>
 
-    <section class="event-details" id="event3">
+    <section class="event-details" id="event3" data-aos="fade-up">
         <h2>Dobytí Minsku</h2>
         <p>Bitva o Bialystok-Minsk, která trvala pouhých 18 dní, od 22. června do 9. července 1941, a byla jednou z prvních akcí operace Barbarossa</p>
         <iframe width="100%" height="850px" src="https://www.youtube.com/embed/4FsyMf6PUyA?si=1dLGXu04XzoGPaiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <a href="#map">Zpět k mapě</a>
     </section>
 
-    <section class="event-details" id="event4">
+    <section class="event-details" id="event4" data-aos="fade-up">
         <h2>Bitva o Smolensk</h2>
         <p>První bitva o Smolensk byla součástí německého plánu Operace Barbarossa a odehrávala se v rozpětí dvou měsíců od 10. července do 10. září 1941.</p>
         <iframe width="100%" height="850px" src="https://www.youtube.com/embed/xIt-cOOdXPw?si=JQy8Tj6NypOnn41n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <a href="#map">Zpět k mapě</a>
     </section>
 
-    <section class="event-details" id="event5">
+    <section class="event-details" id="event5" data-aos="fade-up">
         <h2>Pád Kyjeva</h2>
         <p>Tři měsíce po zahájení útoku na Sovětský svaz vstoupily 19. září 1941 německé jednotky do Kyjeva. Ztráta důležitého města ale nebyla jedinou pohromou, která Sověty potkala – německé tankové jednotky zároveň východně od ukrajinské metropole dokončily uzavření obřího kotle, v němž se ocitlo přes 500 000 sovětských vojáků. Šlo o největší obkličovací operaci v dějinách válek.</p>
         <iframe width="100%" height="850px" src="https://www.youtube.com/embed/nW_xVZ2qx3s?si=HVN69dNZSGYqJVC3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <a href="#map">Zpět k mapě</a>
     </section>
 
-    <section class="event-details" id="event6">
+    <section class="event-details" id="event6" data-aos="fade-up">
         <h2>Shrnutí celé operace v půl minutě</h2>
         <p>GG</p>
         <iframe width="100%" height="850px" src="https://www.youtube.com/embed/wGFSFv2qH1w?si=dL0HbLZUUuNRkJ11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -112,5 +117,25 @@
 
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="leaflet.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+</script>
+
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      const preloader = document.getElementById('preloader');
+      preloader.style.transition = 'opacity 0.5s ease';
+      preloader.style.opacity = '0';
+      
+      setTimeout(function () {
+        preloader.style.display = 'none';
+      }, 500);
+    }, 4000);
+  });
+</script>
 </body>
 </html>

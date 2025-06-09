@@ -1,10 +1,10 @@
 /* Základní nastavení */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
-    color: #333;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
 }
 
 header {
@@ -12,13 +12,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: black;
     border-bottom: 2px solid #ccc;
     }
 
 h1 {
     margin: 0;
     font-size: 2em;
+    color: #ffffff;
 }
 
 p {
@@ -32,10 +33,11 @@ p {
     flex-wrap: wrap;
     padding: 20px;
     margin-top: 30px;
+    background-color: #2a2a2a;
 }
 
 .event {
-    background-color: #3498db;
+    background-color: red;
     color: white;
     padding: 15px;
     margin: 10px;
@@ -61,7 +63,7 @@ p {
 
 /* Detaily události */
 .event-details {
-    background-color: white;
+    background-color: black;
     padding: 30px;
     margin-top: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -160,4 +162,30 @@ header p {
         width: 100%;
         height: auto;
     }
+}
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader-text {
+    color: white;
+    font-size: 1.5em;
+    font-family: 'Segoe UI', sans-serif;
+    opacity: 0;
+    animation: fadeInText 2s ease forwards;
+}
+
+@keyframes fadeInText {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
